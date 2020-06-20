@@ -2,6 +2,10 @@ import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+
+
+
+
 import {
   BrowserRouter,
   Route,
@@ -9,11 +13,14 @@ import {
   Switch,
 } from 'react-router-dom';
 
+
+
 import './App.scss';
 
 import MyNavbar from '../components/shared/MyNavbar/MyNavbar';
 
 import Auth from '../components/pages/Auth/Auth';
+import Home from '../components/pages/Home/Home';
 import EditFunFact from '../components/pages/EditFunFact/EditFunFact';
 import EditFamilyMember from '../components/pages/EditFamilyMember/EditFamilyMember';
 import FunFacts from '../components/pages/FunFacts/FunFacts';
@@ -71,7 +78,6 @@ class App extends React.Component {
               <div className="row">
               <Switch>
                 <PrivateRoute path='/home' component={Home} authed={authed} />
-
                 <PrivateRoute path='/facts/new' component={NewFunFact} authed={authed} />
                 <PrivateRoute path='/facts/:factId' component={SingleFunFact} authed={authed} />
                 <PrivateRoute path='/facts' component={FunFacts} authed={authed} />
