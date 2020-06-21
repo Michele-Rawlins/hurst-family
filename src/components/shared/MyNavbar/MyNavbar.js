@@ -57,8 +57,8 @@ class MyNavbar extends React.Component {
 
     return (
         <div className="myNavbar">
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Hurst Family</NavbarBrand>
+        <Navbar color="" light expand="md">
+          <NavbarBrand href="/"><span><img src="https://live.staticflickr.com/65535/50028151452_aee1fc33c6_n.jpg" width="150" height="150" alt="Hurst-England"></img></span></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={isOpen} navbar>
             {buildNavbar()}
