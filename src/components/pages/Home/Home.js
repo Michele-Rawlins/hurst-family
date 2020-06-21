@@ -1,6 +1,6 @@
 import React from 'react';
 
-import authData from '../../../helpers/data/authData';
+// import authData from '../../../helpers/data/authData';
 
 
 import './Home.scss';
