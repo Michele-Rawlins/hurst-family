@@ -13,11 +13,20 @@ class Home extends React.Component {
       <div className="Home container">
         <h1 className="hurst-homepage">Welcome to the Hurst Famly</h1>
         <p className="arabian-proverb">Every day of your life is a page of your history. -- Arabian Proverb</p>
-        <img className="JamesandElsiePic" src="https://live.staticflickr.com/65535/50027351133_6890848f92_n.jpg" width="320" height="213" alt="jamesAndElsieCloseUp"></img>
+        <img className="JamesandElsiePic" src="https://live.staticflickr.com/65535/50027351133_6890848f92_n.jpg" width="400" height="350" alt="jamesAndElsieCloseUp"></img>
+        <p className="hurst-beginnings align-left"> In a little farmhouse in Hinkle Haller, the next generation of the Hurst family began. They farmed the land from harvesting crops to making baseball bats.  They only went to town for salt, sugar and flour.  They ground their own meal.  They all rose from humble beginnings.  Each was a success in their own right.</p>
+        <img className="hurst-home-dog align-right" src="https://live.staticflickr.com/65535/50027350968_6cfbcd7cce_n.jpg" width="320" height="318" alt="dogOnPorch"></img>
+        <img className="hurst-home align-right" src="https://live.staticflickr.com/65535/50021056126_fc9fb6d89f_n.jpg" width="320" height="318" alt="hursthome"></img>
+        <img className="hurst-farm align-right" src="https://live.staticflickr.com/65535/50021056226_221731e6c5_n.jpg" width="320" height="318" alt="familyfarm"></img>
+        <p className="hurst-beginnings">All of the Hurst children born to James and Elsie Hurst ended up leaving Hinkle Haller in Fort Knox, Ky. Each of them spread their wings and created a life well lived.  They never lost the importance of family.   Every couple of years, they found a way to come back together, to catch up and to remember.  This page is for them.</p>
         <div className="d-flex flex-wrap">
        </div>
+      
+    <div className="footer fixed bottom">
+       <p>© 2020 - Michele Rawlins</p>
+    </div>
+    </div>
 
-      </div>
     );
   }
 }
