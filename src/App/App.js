@@ -4,8 +4,6 @@ import 'firebase/auth';
 
 
 
-
-
 import {
   BrowserRouter,
   Route,
@@ -14,9 +12,7 @@ import {
 } from 'react-router-dom';
 
 
-
 import './App.scss';
-
 import MyNavbar from '../components/shared/MyNavbar/MyNavbar';
 
 import Auth from '../components/pages/Auth/Auth';
