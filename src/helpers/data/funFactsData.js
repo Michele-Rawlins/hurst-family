@@ -19,8 +19,9 @@ const getFunFactsByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-
+const postNewFunFact = (newFunFact) => axios.post(`${baseUrl}/funFacts.json`, newFunFact);
 
 export default {
   getFunFactsByUid,
+  postNewFunFact,
  };
