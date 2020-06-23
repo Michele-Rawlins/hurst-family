@@ -11,6 +11,7 @@ class FunFactsCard extends React.Component {
   }
   render() {
     const { funFacts } = this.props;
+    const singleLink = `/facts/${funFacts.id}`;
     const editLink = `/facts/edit/${funFacts.id}`;
     return (
       <div className="funFactsCard col-5">
@@ -19,6 +20,7 @@ class FunFactsCard extends React.Component {
           <img className="document-pic" src={funFacts.imageUrl} alt="item in collection"></img>
             <h5 className="card-year">{funFacts.year}</h5>
             <p className="card-text">{funFacts.description}</p>
+            <Link className="btn btn-info" to={singleLink}><i className="fas fa-binoculars"></i></Link>
           <Link className="btn btn-secondary" to={editLink}><i className="fas fa-pencil-alt"></i></Link>
           </div>
         </div>
