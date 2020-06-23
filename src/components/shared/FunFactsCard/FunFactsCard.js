@@ -12,7 +12,7 @@ class FunFactsCard extends React.Component {
   render() {
     const { funFacts } = this.props;
     return (
-      <div className="funFactsCard col-4">
+      <div className="funFactsCard col-5">
         <div className="card">
           <div className="card-body">
           <img className="document-pic" src={funFacts.imageUrl} alt="item in collection"></img>

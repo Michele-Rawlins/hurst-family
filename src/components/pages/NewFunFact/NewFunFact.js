@@ -8,31 +8,51 @@ import funFactsData from '../../../helpers/data/funFactsData';
 
 class NewFunFact extends React.Component {
   state = {
-    newImageUrl: '',
-    newYear: '',
-    newDescription: '',
+    newFunFactImage: '',
+    newFunFactYear: '',
+    newFunFactDescription: '',
   }
 
   newFunFactImage = (e) => {
     e.preventDefault();
-    this.setState({newImageUrl: e.target.value });
+    this.setState({newFunFactImage: e.target.value });
   }
 
   newFunFactYear = (e) => {
     e.preventDefault();
-    this.setState({newYear: e.target.value });
+    this.setState({newFunFactYear: e.target.value });
   }
 
   newFunFactDescription = (e) => {
     e.preventDefault();
-    this.setState({newDescription: e.target.value });
+    this.setState({newFunFactDescription: e.target.value });
+  }
+
+  saveNewFunFact = (e) => {
+    e.preventDefault();
+    const {
+      newFunFactImage,
+      newFunFactYear,
+      newFunFactDescription,
+    } = this.state;
+  
+  const newFunFact = {
+    imageUrl: newFunFactImage,
+    year: newFunFactYear,
+    description: newFunFactDescription,
+    uid: authData.getUid(),
+  };
+
+  funFactsData.postNewFunFact(newFunFact)
+    .then(() => this.props.history.push('/facts'))
+    .catch((err) => console.error('unable to add new fun fact', err));
   }
 
 render() {
   const {
-    newImageUrl,
-    newYear,
-    newDescription
+    newFunFactImageUrl,
+    newFunFactYear,
+    newFunFactDescription
   } = this.state;
 
 
@@ -47,7 +67,7 @@ render() {
         type="text"
         className="form-control"
         id="new-fun-fact-image"
-        value={newImageUrl}
+        value={newFunFactImageUrl}
         onChange={this.newFunFactImage}
         />
         </div>
@@ -57,17 +77,17 @@ render() {
         type="text"
         className="form-control"
         id="new-year"
-        value={newYear}
+        value={newFunFactYear}
         onChange={this.newFunFactYear}
         />
         </div>
         <div className="form-group">
-        <label htmlFor="new-description">Description)</label>
+        <label htmlFor="new-description">Description</label>
       <input
         type="text"
         className="form-control"
         id="new-description"
-        value={newDescription}
+        value={newFunFactDescription}
         onChange={this.newFunFactDescription}
         />
         </div>
@@ -76,5 +96,8 @@ render() {
     </div>
   );
 }
+}
+
+
 
 export default NewFunFact;
