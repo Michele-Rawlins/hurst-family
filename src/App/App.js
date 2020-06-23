@@ -75,10 +75,10 @@ class App extends React.Component {
               <Switch>
                 <PrivateRoute path='/home' component={Home} authed={authed} />
                 <PrivateRoute path='/facts/new' component={NewFunFact} authed={authed} />
-                <PrivateRoute path='/facts/:factId' component={SingleFunFact} authed={authed} />
+                <PrivateRoute path='/facts/:funFactsId' component={SingleFunFact} authed={authed} />
                 <PrivateRoute path='/facts' component={FunFacts} authed={authed} />
                 <PrivateRoute path='/family/edit/:familyMemberId' component={EditFamilyMember} authed={authed} />
-                <PrivateRoute path='/facts/edit/:factId' component={EditFunFact} authed={authed} />
+                <PrivateRoute path='/facts/edit/:funFactsId' component={EditFunFact} authed={authed} />
                 <PrivateRoute path='/family/new' component={NewFamilyMember} authed={authed} />
                 <PrivateRoute path='/family/:familyMemberId' component={SingleFamilyMember} authed={authed} />
                 <PrivateRoute path='/family' component={FamilyMembers} authed={authed} />
