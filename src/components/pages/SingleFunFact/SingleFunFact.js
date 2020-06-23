@@ -20,7 +20,7 @@ class SingleFunFact extends React.Component {
 render () {
   const { funFacts } = this.state;
   const { funFactsId } = this.props.match.params;
-  const editLink = `/facts/edit/${funFacts.id}`;
+  const editLink = `/facts/edit/${funFactsId}`;
 return (
   <div className="SingleFunFact">
     <Link className="btn btn-secondary" to={editLink}><i className="fas fa-pencil-alt"></i></Link>
