@@ -19,9 +19,15 @@ const getFunFactsByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const getSingleFunFact = (funFactsId) => axios.get(`${baseUrl}/funFacts/${funFactsId}.json`);
+
 const postNewFunFact = (newFunFact) => axios.post(`${baseUrl}/funFacts.json`, newFunFact);
+
+const putFunFact = (funFactsId, updatedFunFact) => axios.put(`${baseUrl}/funFacts/${funFactsId}.json`, updatedFunFact);
 
 export default {
   getFunFactsByUid,
   postNewFunFact,
+  getSingleFunFact,
+  putFunFact,
  };

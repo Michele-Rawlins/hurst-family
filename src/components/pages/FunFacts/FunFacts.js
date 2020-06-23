@@ -21,7 +21,7 @@ class FunFacts extends React.Component {
   render() {
     const { funFacts } = this.state;
     const buildFunFactsCards = funFacts.map((funFacts) => (
-      <FunFactsCard key ={funFactsData.id} funFacts={funFacts}/>
+      <FunFactsCard key ={funFacts.id} funFacts={funFacts}/>
     ));
     return (
       <div className="FunFacts">
