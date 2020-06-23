@@ -1,7 +1,7 @@
 import React from 'react';
 
 import authData from '../../../helpers/data/authData';
-import funFactData from '../../../helpers/data/funFactsData';
+import funFactsData from '../../../helpers/data/funFactsData';
 import './EditFunFact.scss';
 
 class EditFunFact extends React.Component {
@@ -13,7 +13,7 @@ class EditFunFact extends React.Component {
 
   componentDidMount() {
     const editId = this.props.match.params.funFactsId;
-    funFactData.getSingleFunFact(editId)
+    funFactsData.getSingleFunFact(editId)
     .then((response) => {
       const funFact = response.data;
       this.setState({
@@ -57,7 +57,7 @@ class EditFunFact extends React.Component {
     uid: authData.getUid(),
   };
 
-  funFactData.putFunFact(funFactsId, updatedFunFact)
+  funFactsData.putFunFact(funFactsId, updatedFunFact)
     .then(() => this.props.history.push('/facts'))
     .catch((err) => console.error('unable to edit fun fact', err));
 
