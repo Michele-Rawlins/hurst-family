@@ -12,8 +12,8 @@ class EditFunFact extends React.Component {
   }
 
   componentDidMount() {
-    const editId = this.props.match.params.funFactsId;
-    funFactsData.getSingleFunFact(editId)
+    const funFactsId = this.props.match.params.funFactsId;
+    funFactsData.getSingleFunFact(funFactsId)
     .then((response) => {
       const funFact = response.data;
       this.setState({
@@ -65,7 +65,7 @@ class EditFunFact extends React.Component {
 
   render() {
     const {
-      newFunFactImageUrl,
+      newFunFactImage,
       newFunFactYear,
       newFunFactDescription,
     } =this.state;
@@ -80,7 +80,7 @@ class EditFunFact extends React.Component {
         type="text"
         className="form-control"
         id="new-fun-fact-image"
-        value={newFunFactImageUrl}
+        value={newFunFactImage}
         onChange={this.newFunFactImage}
         />
         </div>
