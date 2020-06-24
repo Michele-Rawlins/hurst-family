@@ -26,6 +26,7 @@ const postNewFunFact = (newFunFact) => axios.post(`${baseUrl}/funFacts.json`, ne
 const putFunFact = (funFactsId, updatedFunFact) => axios.put(`${baseUrl}/funFacts/${funFactsId}.json`, updatedFunFact);
 
 const deleteFunFact = (funFactsId) => axios.delete(`${baseUrl}/funFacts/${funFactsId}.json`);
+
 export default {
   getFunFactsByUid,
   postNewFunFact,
