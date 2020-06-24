@@ -19,7 +19,9 @@ const getFamilyMembersByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const postNewFamilyMember = (newFamilyMember) => axios.post(`${baseUrl}/familyMembers.json`, newFamilyMember);
+
 export default {
   getFamilyMembersByUid,
-
+  postNewFamilyMember,  
  };
