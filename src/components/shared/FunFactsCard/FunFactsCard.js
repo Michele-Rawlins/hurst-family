@@ -8,9 +8,10 @@ import './FunFactsCard.scss';
 class FunFactsCard extends React.Component {
   static propTypes = {
     funFacts: funFactShape.funFactShape,
+    removeFunFact: PropTypes.func.isRequired,
   }
   render() {
-    const { funFacts } = this.props;
+    const { funFacts, removeFunFact } = this.props;
     const singleLink = `/facts/${funFacts.id}`;
     const editLink = `/facts/edit/${funFacts.id}`;
     return (
@@ -19,9 +20,10 @@ class FunFactsCard extends React.Component {
           <div className="card-body">
           <img className="document-pic" src={funFacts.imageUrl} alt="item in collection"></img>
             <h5 className="card-year">{funFacts.year}</h5>
-            <p className="card-text">{funFacts.description}</p>
             <Link className="btn btn-info" to={singleLink}><i className="fas fa-binoculars"></i></Link>
-          <Link className="btn btn-secondary" to={editLink}><i className="fas fa-pencil-alt"></i></Link>
+          <Link className="btn btn-success" to={editLink}><i className="fas fa-pencil-alt"></i></Link>
+           <button className="btn btn-danger" onClick={() => removeFunFact(funFacts.id)}><i className="fas fa-trash-alt"></i></button>
+            <p className="card-text">{funFacts.description}</p>
           </div>
         </div>
       </div>

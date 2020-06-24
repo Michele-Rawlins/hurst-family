@@ -18,10 +18,17 @@ class FunFacts extends React.Component {
   componentDidMount() {
     this.getFunFacts();
   }
+
+  removeFunFact = (funFactId) => {
+    funFactsData.deleteFunFact(funFactId)
+    .then(() => this.getFunFacts())
+    .catch((err) => console.error('unable to delete fun fact', err));
+  }
+
   render() {
     const { funFacts } = this.state;
     const buildFunFactsCards = funFacts.map((funFacts) => (
-      <FunFactsCard key ={funFacts.id} funFacts={funFacts}/>
+      <FunFactsCard key ={funFacts.id} funFacts={funFacts} removeFunFact={this.removeFunFact}/>
     ));
     return (
       <div className="FunFacts">
