@@ -19,8 +19,8 @@ class FunFacts extends React.Component {
     this.getFunFacts();
   }
 
-  removeFunFact = (funFactId) => {
-    funFactsData.deleteFunFact(funFactId)
+  removeFunFact = (funFactsId) => {
+    funFactsData.deleteFunFact(funFactsId)
     .then(() => this.getFunFacts())
     .catch((err) => console.error('unable to delete fun fact', err));
   }

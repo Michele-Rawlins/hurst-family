@@ -11,6 +11,8 @@ class FamilyMembersCard extends React.Component {
   }
   render() {
     const { familyMembers } = this.props;
+    const singleLink = `/family/${familyMembers.id}`;
+    const editLink = `/family/edit/${familyMembers.id}`;
     return (
       <div className="FamilyMembersCard col-5">
         <div className="card">
@@ -21,7 +23,9 @@ class FamilyMembersCard extends React.Component {
          <h5 className="birthdate">{familyMembers.birthdate}</h5>
           <h5 className="children">{familyMembers.children}</h5>
          <h5 className="death">{familyMembers.death}</h5>
-         </div>
+         <Link className="btn btn-info" to={singleLink}><i className="fas fa-binoculars"></i></Link>
+          <Link className="btn btn-success" to={editLink}><i className="fas fa-pencil-alt"></i></Link>
+        </div>
         </div>
       </div>
     );

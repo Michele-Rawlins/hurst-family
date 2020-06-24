@@ -78,9 +78,9 @@ class App extends React.Component {
                 <PrivateRoute path='/facts/edit/:funFactsId' component={EditFunFact} authed={authed} />
                 <PrivateRoute path='/facts/:funFactsId' component={SingleFunFact} authed={authed} />
                 <PrivateRoute path='/facts' component={FunFacts} authed={authed} />
-                <PrivateRoute path='/family/edit/:familyMemberId' component={EditFamilyMember} authed={authed} />
+                <PrivateRoute path='/family/edit/:familyMembersId' component={EditFamilyMember} authed={authed} />
                 <PrivateRoute path='/family/new' component={NewFamilyMember} authed={authed} />
-                <PrivateRoute path='/family/:familyMemberId' component={SingleFamilyMember} authed={authed} />
+                <PrivateRoute path='/family/:familyMembersId' component={SingleFamilyMember} authed={authed} />
                 <PrivateRoute path='/family' component={FamilyMembers} authed={authed} />
                 <PublicRoute path='/auth' component={Auth} authed={authed} />
                 <Redirect from= "*" to="/home"/>
