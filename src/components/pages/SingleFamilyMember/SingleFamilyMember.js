@@ -16,6 +16,12 @@ componentDidMount() {
     .catch((err) => console.error('unable to get single family member', err));
 }
 
+removeFamilyMember = () => {
+  const { familyMembersId } = this.props.match.params;
+  familyMembersData.deleteFamilyMember(familyMembersId)
+  .then(() => this.props.history.push('/family'))
+  .catch((err) => console.error('unable to delete family member', err));
+}
 render () {
   const { familyMembers } = this.state;
   const { familyMembersId } = this.props.match.params;
@@ -30,6 +36,7 @@ return (
           <h5 className="children">{familyMembers.children}</h5>
          <h5 className="death">{familyMembers.death}</h5>
          <Link className="btn btn-success" to={editLink}><i className="fas fa-pencil-alt"></i></Link>
+         <button className="btn btn-danger" onClick={this.removeFamilyMember}><i className="fas fa-trash-alt"></i></button>
     </div>
 );
 }

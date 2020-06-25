@@ -18,10 +18,18 @@ class FamilyMembers extends React.Component {
   componentDidMount() {
   this.getFamilyMembers();
   }
+
+  removeFamilyMember = (familyMembersId) => {
+    familyMembersData.deleteFamilyMember(familyMembersId)
+    .then(() => this.getFamilyMembers())
+    .catch((err) => console.error('unable to delete family member', err));
+  
+  }
+
   render() {
     const { familyMembers } =this.state;
     const buildFamilyMembersCard = familyMembers.map((familyMembers) => (
-      <FamilyMembersCard key={familyMembers.id} familyMembers={familyMembers}/>
+      <FamilyMembersCard key={familyMembers.id} familyMembers={familyMembers} removeFamilyMember={this.removeFamilyMember}/>
     ));
     return (
       <div className="FamilyMembers">

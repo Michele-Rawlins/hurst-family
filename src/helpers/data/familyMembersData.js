@@ -25,12 +25,13 @@ const postNewFamilyMember = (newFamilyMember) => axios.post(`${baseUrl}/familyMe
 
 const putFamilyMember = (familyMembersId, updatedFamilyMember) => axios.put(`${baseUrl}/familyMembers/${familyMembersId}.json`, updatedFamilyMember);
 
-
+const deleteFamilyMember = (familyMembersId) => axios.delete(`${baseUrl}/familyMembers/${familyMembersId}.json`);
 
 export default {
   getFamilyMembersByUid,
   postNewFamilyMember,
   getSingleFamilyMember, 
   putFamilyMember,
+  deleteFamilyMember,
 
  };
