@@ -23,8 +23,14 @@ const getSingleFamilyMember = (familyMembersId) => axios.get(`${baseUrl}/familyM
 
 const postNewFamilyMember = (newFamilyMember) => axios.post(`${baseUrl}/familyMembers.json`, newFamilyMember);
 
+const putFamilyMember = (familyMembersId, updatedFamilyMember) => axios.put(`${baseUrl}/familyMembers/${familyMembersId}.json`, updatedFamilyMember);
+
+
+
 export default {
   getFamilyMembersByUid,
   postNewFamilyMember,
-  getSingleFamilyMember,  
+  getSingleFamilyMember, 
+  putFamilyMember,
+
  };
