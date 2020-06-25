@@ -19,10 +19,10 @@ class FamilyMembersCard extends React.Component {
           <div className="card-body">
             <img className="family-member-image" src={familyMembers.imageUrl} alt="family member"></img>
           <h4 className="family-member-name">{familyMembers.name}</h4>
-          <h5 className="family-members-spouse">{familyMembers.spouse}</h5>
-         <h5 className="birthdate">{familyMembers.birthdate}</h5>
-          <h5 className="children">{familyMembers.children}</h5>
-         <h5 className="death">{familyMembers.death}</h5>
+          <h5 className="family-members-spouse">Spouse:{familyMembers.spouse}</h5>
+         <h5 className="birthdate">Birthdate:{familyMembers.birthdate}</h5>
+          <h5 className="children">Children: {familyMembers.children}</h5>
+         <h5 className="death">Death:{familyMembers.death}</h5>
          <Link className="btn btn-info" to={singleLink}><i className="fas fa-binoculars"></i></Link>
           <Link className="btn btn-success" to={editLink}><i className="fas fa-pencil-alt"></i></Link>
           <button className="btn btn-danger" onClick={() => removeFamilyMember(familyMembers.id)}><i className="fas fa-trash-alt"></i></button>

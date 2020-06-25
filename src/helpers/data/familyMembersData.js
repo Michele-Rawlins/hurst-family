@@ -33,5 +33,4 @@ export default {
   getSingleFamilyMember, 
   putFamilyMember,
   deleteFamilyMember,
-
  };
