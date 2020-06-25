@@ -7,10 +7,10 @@ import familyMembersShape from '../../../helpers/propz/familyMembersShape';
 class FamilyMembersCard extends React.Component {
   static propTypes = {
     familyMembers: familyMembersShape.familyMembersShape,
-
+    removeFamilyMember: PropTypes.func.isRequired,
   }
   render() {
-    const { familyMembers } = this.props;
+    const { familyMembers, removeFamilyMember } = this.props;
     const singleLink = `/family/${familyMembers.id}`;
     const editLink = `/family/edit/${familyMembers.id}`;
     return (
@@ -25,6 +25,7 @@ class FamilyMembersCard extends React.Component {
          <h5 className="death">{familyMembers.death}</h5>
          <Link className="btn btn-info" to={singleLink}><i className="fas fa-binoculars"></i></Link>
           <Link className="btn btn-success" to={editLink}><i className="fas fa-pencil-alt"></i></Link>
+          <button className="btn btn-danger" onClick={() => removeFamilyMember(familyMembers.id)}><i className="fas fa-trash-alt"></i></button>
         </div>
         </div>
       </div>
