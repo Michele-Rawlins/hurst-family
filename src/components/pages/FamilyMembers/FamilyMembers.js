@@ -4,11 +4,16 @@ import authData from '../../../helpers/data/authData';
 import familyMembersData from '../../../helpers/data/familyMembersData';
 import FamilyMembersCard from '../../shared/FamilyMembersCard/FamilyMembersCard';
 
+import FilterResults from 'react-filter-search';
+
+
 class FamilyMembers extends React.Component {
-  state={
+ state={
     familyMembers: [],
    
   }
+
+
   getFamilyMembers =() => {
     const uid = authData.getUid();
     familyMembersData.getFamilyMembersByUid(uid)
@@ -27,7 +32,6 @@ class FamilyMembers extends React.Component {
   
   }
 
-
   render() {
     const { familyMembers } =this.state;
       const buildFamilyMembersCard = familyMembers.map((familyMembers) => (
@@ -38,10 +42,11 @@ class FamilyMembers extends React.Component {
       <div className="FamilyMembers">
         <h1>Family Members</h1>
         <div className="d-flex flex-wrap">
-        {buildFamilyMembersCard}
-        </div>
+       {buildFamilyMembersCard}
       </div>
-    );
-  }
-}
+      </div>
+    )
+  } 
+}  
+
 export default FamilyMembers;
