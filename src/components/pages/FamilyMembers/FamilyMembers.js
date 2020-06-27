@@ -4,7 +4,7 @@ import authData from '../../../helpers/data/authData';
 import familyMembersData from '../../../helpers/data/familyMembersData';
 import FamilyMembersCard from '../../shared/FamilyMembersCard/FamilyMembersCard';
 
-import FilterResults from 'react-filter-search';
+// import FilterResults from 'react-filter-search';
 
 
 class FamilyMembers extends React.Component {

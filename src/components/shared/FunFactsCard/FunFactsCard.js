@@ -15,14 +15,14 @@ class FunFactsCard extends React.Component {
     const singleLink = `/facts/${funFacts.id}`;
     const editLink = `/facts/edit/${funFacts.id}`;
     return (
-      <div className="funFactsCard col-5">
+      <div className="funFactsCard col-4">
         <div className="card">
           <div className="card-body">
           <img className="document-pic" src={funFacts.imageUrl} alt="item in collection"></img>
             <h5 className="card-year">{funFacts.year}</h5>
-            <Link className="btn btn-info" to={singleLink}><i className="fas fa-binoculars"></i></Link>
-          <Link className="btn btn-success" to={editLink}><i className="fas fa-pencil-alt"></i></Link>
-           <button className="btn btn-danger" onClick={() => removeFunFact(funFacts.id)}><i className="fas fa-trash-alt"></i></button>
+            <Link className="btn btn-outline-dark" to={singleLink}><i className="fas fa-glasses"></i></Link>
+          <Link className="btn btn-outline-light" to={editLink}><i className="fas fa-pen-alt"></i></Link>
+           <button className="btn btn-outline-danger" onClick={() => removeFunFact(funFacts.id)}><i className="fas fa-skull-crossbones"></i></button>
             <p className="card-text">{funFacts.description}</p>
           </div>
         </div>

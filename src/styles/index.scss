@@ -2,14 +2,99 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 body {
-  background-color: $color3-gold;
+  background-color: $color7-yellow;
 }
 
 .hurst-homepage {
-  font-family: Bershire Swash;
+  font-family: Shadows Into Light, cursive;
   text-align: center;
   text-decoration: underline overline $color4-pink;
  
+}
+
+.display-4 {
+  font-family: Shadows Into Light, cursive;
+  text-align: center;
+  text-decoration: underline overline $color4-pink;
+  background-color: $color7-yellow;
+  height: 90px;
+  font-size: 80px;
+}
+
+.arabian-proverb {
+  font-family: Satisfy, cursive;
+  font-size: 25px;
+
+}
+.jumbotron {
+  background-color: $color3-gold;
+  height: 425px;
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+}
+
+.align-right {
+  padding: 50px;
+  border-radius: 180px;
+  text-align: right;
+}
+
+.align-center {
+  padding: 50px;
+  border-radius: 180px;
+  text-align: center;
+}
+.align-left {
+  padding: 50px;
+  border-radius: 180px;
+  text-align: left;
+}
+
+
+.myNavbar {
+  background-color: $color4-pink;
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+}
+
+NavLink {
+  color: black;
+
+}
+.navbar-links {
+  color: black;
+  font-family: Shadows Into Light, cursive;
+  font-size: 35px;
+  text-decoration: underline $color4-pink;
+  margin: 5px;
+  padding: 10px;
+
+}
+.photo-container {
+  background-color: $color4-pink;
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+}
+.footer {
+  text-decoration: overline underline $color4-pink;
+  font-family: Satisfy, cursive;
+
+}
+p {
+  font-family: Shadows Into Light, cursive;
+  font-size: 20px;
+}
+
+.family-member-image {
+width: 250px;
+height: 250px;
+}
+.card {
+  background-color: $color1-beige;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  box-shadow: 8px 8px 8px 8px black;
 }
