@@ -186,7 +186,7 @@
    "imageUrl":"https://live.staticflickr.com/65535/50019711483_c4d3ff0964_n.jpg",
    "birthdate":"August 18, 1859",
    "death": "June 28, 1948",
-   "children": "James",
+   "children": "James, Eli, Mary, Emma, William and Callie",
    "uid": "fHFF8hbsBVXOeewWYmTvvrAY1Aa2"
   },
   "familyMembers20": {
@@ -196,7 +196,7 @@
    "imageUrl":"Not Available",
    "birthdate":"April 6, 1859",
    "death": "December 20, 1919",
-   "children": "James",
+   "children": "James, Eli, Mary, Emma, William and Callie",
    "uid": "fHFF8hbsBVXOeewWYmTvvrAY1Aa2"
   },
   "familyMembers21": {
@@ -206,7 +206,7 @@
    "imageUrl":"Not Available",
    "birthdate":"November 5, 1863",
    "death": "December 6, 1950",
-   "children": "Elsie",
+   "children": "Elsie, Lillie, Lee, Thea, Tilford, Henan, Mary, James, Sudie and Argie",
    "uid": "fHFF8hbsBVXOeewWYmTvvrAY1Aa2"
   },
   "familyMembers22": {
@@ -216,7 +216,27 @@
    "imageUrl":"Not Available",
    "birthdate":"May 5, 1857",
    "death": "March 9, 1952",
-   "children": "Elsie",
+   "children": "Elsie, Lillie, Lee, Thea, Tilford, Henan, Mary, James, Sudie and Argie",
+   "uid": "fHFF8hbsBVXOeewWYmTvvrAY1Aa2"
+  },
+  "familyMembers23": {
+    "name": "Theopholis Bingham",
+   "profession": "",
+   "spouse": "Mary Nancy Collin",
+   "imageUrl":"Not Available",
+   "birthdate":"1838",
+   "death": "July 4, 1904",
+   "children": "Nancy, Sarah, James and Charles",
+   "uid": "fHFF8hbsBVXOeewWYmTvvrAY1Aa2"
+  },
+  "familyMembers24": {
+    "name": "Mary Nancy Collin",
+   "profession": "",
+   "spouse": "Theopholis Bingham",
+   "imageUrl":"Not Available",
+   "birthdate":"1841",
+   "death": "1920",
+   "children": "Nancy, Sarah, James and Charles",
    "uid": "fHFF8hbsBVXOeewWYmTvvrAY1Aa2"
   }
 
