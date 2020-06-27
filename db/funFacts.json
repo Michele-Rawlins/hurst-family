@@ -29,9 +29,9 @@
    },
    "funFacts5": {
     "familyMemberId":"familyMembers1",
-    "imageUrl":"https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19710002792.pdf",
+    "imageUrl":"https://live.staticflickr.com/65535/50051684857_ca5af00f14_n.jpg",
    "year": "1970",
-   "description":"NASA Technical Memorandum",
+   "description":"NASA Technical Memorandum written by Evert Hurst https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19710002792.pdf",
    "uid": "fHFF8hbsBVXOeewWYmTvvrAY1Aa2"
    },
    "funFacts6": {
@@ -95,6 +95,20 @@
     "imageUrl":"https://live.staticflickr.com/65535/50048859006_9bec9dfffa_n.jpg",
    "year": "1923",
    "description":"Caleb and Evert.",
+   "uid": "fHFF8hbsBVXOeewWYmTvvrAY1Aa2"
+   },
+   "funFacts15": {
+    "familyMemberId":"FamilyMembers17",
+    "imageUrl":"https://live.staticflickr.com/65535/50050774083_36135dd482_n.jpg", 
+   "year": "1954",
+   "description":"James Hurst Death Certificate",
+   "uid": "fHFF8hbsBVXOeewWYmTvvrAY1Aa2"
+   },
+   "funFacts16": {
+    "familyMemberId":"FamilyMembers21",
+    "imageUrl":"https://live.staticflickr.com/65535/50051593687_1bf163c628_n.jpg", 
+   "year": "1884",
+   "description":"Marriage Certificate for George and Katherine",
    "uid": "fHFF8hbsBVXOeewWYmTvvrAY1Aa2"
    }
 

@@ -39,24 +39,24 @@ class MyNavbar extends React.Component {
       const { authed } = this.props;
       if (authed) {
         return (
-          <Nav className="ml-auto" navbar>
+          <Nav className="ml-auto navbar-links bg-dark" navbar>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
+              <NavLink className="navbar-links" tag={RRNavLink} to='/home'>Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/facts'>Fun Facts</NavLink>
+              <NavLink className="navbar-links" tag={RRNavLink} to='/facts'>Fun Facts</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/facts/new'>New Fun Fact</NavLink>
+              <NavLink className="navbar-links" tag={RRNavLink} to='/facts/new'>New Fun Fact</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/family'>Family Members</NavLink>
+              <NavLink className="navbar-links" tag={RRNavLink} to='/family'>Family Members</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/family/new'>New Family Members</NavLink>
+              <NavLink className="navbar-links" tag={RRNavLink} to='/family/new'>New Family Members</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink onClick={this.logMeOut}>Log Out</NavLink>
+              <NavLink className="navbar-links" onClick={this.logMeOut}>Log Out</NavLink>
           </NavItem>
           </Nav>
         );
@@ -65,8 +65,12 @@ class MyNavbar extends React.Component {
     };
 
     return (
+      <div className="jumbotron jumbotron-fluid">
+      <div className="container">
+        <h1 className="display-4 intro">Welcome to the Hurst Family</h1>
+        <p className="arabian-proverb">Every day of your life is a page of your history. -- Arabian Proverb</p>
         <div className="myNavbar">
-        <Navbar color="light"  expand="md">
+        <Navbar className="myNavbar" color=""  expand="md">
           <NavbarBrand href="/"><span><img src="https://live.staticflickr.com/65535/50028151452_aee1fc33c6_n.jpg" width="150" height="150" alt="Hurst-England"></img></span></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={isOpen} navbar>
@@ -74,6 +78,8 @@ class MyNavbar extends React.Component {
           </Collapse>
         </Navbar>
       </div>
+      </div>
+</div>
     );
   }
 }

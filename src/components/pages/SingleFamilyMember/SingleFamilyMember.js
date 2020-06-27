@@ -29,8 +29,8 @@ render () {
 
 return (
   <div className="SingleFamilyMember">
-         <img className="family-member-image" src={familyMembers.imageUrl} alt="family member"></img>
           <h4 className="family-member-name">{familyMembers.name}</h4>
+         <img className="family-member-image" src={familyMembers.imageUrl} alt="family member"></img>
           <h5 className="family-members-spouse">{familyMembers.spouse}</h5>
          <h5 className="birthdate">{familyMembers.birthdate}</h5>
           <h5 className="children">{familyMembers.children}</h5>
