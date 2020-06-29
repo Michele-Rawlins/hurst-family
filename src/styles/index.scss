@@ -92,9 +92,19 @@ p {
 width: 250px;
 height: 250px;
 }
+h4 {
+  font-family: Shadows Into Light, cursive;
+}
+h5 {
+  font-family: Shadows Into Light, cursive;
+}
 .card {
   background-color: $color1-beige;
   margin-bottom: 20px;
   border: 2px solid black;
   box-shadow: 8px 8px 8px 8px black;
+  font-family: Shadows Into Light, cursive;
+}
+.card-body {
+  font-family: Shadows Into Light, cursive;
 }
