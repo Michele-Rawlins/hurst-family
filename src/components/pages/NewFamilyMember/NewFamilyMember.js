@@ -9,7 +9,7 @@ class NewFamilyMember extends React.Component {
     newName: '',
     newProfession: '',
     newSpouse: '',
-    newImageUrl: '',
+    newFamilyImage: '',
     newBirthdate: '',
     newDeath: '',
     newChildren: '',
@@ -29,9 +29,9 @@ newSpouse = (e) => {
   this.setState({newSpouse: e.target.value});
 }
 
-newImageUrl = (e) => {
+newFamilyImage = (e) => {
   e.preventDefault();
-  this.setState({newImageUrl: e.target.value});
+  this.setState({newFamilyImage: e.target.value});
 }
 
 newBirthdate = (e) => {
@@ -55,7 +55,7 @@ saveNewFamilyMember = (e) => {
     newName,
     newProfession,
     newSpouse,
-    newImageUrl,
+    newFamilyImage,
     newBirthdate,
     newDeath,
     newChildren,
@@ -66,7 +66,7 @@ const newFamilyMember = {
   name: newName,
   profession: newProfession,
   spouse: newSpouse,
-  imageUrl: newImageUrl,
+  imageUrl: newFamilyImage,
   birthdate: newBirthdate,
   death: newDeath,
   children: newChildren,
@@ -130,7 +130,7 @@ render() {
         className="form-control"
         id="new-imageUrl"
         value={newImageUrl}
-        onChange={this.newImageUrl}
+        onChange={this.newFamilyImage}
         />
         </div>
         <div className="form-group">

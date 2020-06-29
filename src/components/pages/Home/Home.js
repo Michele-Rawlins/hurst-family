@@ -21,7 +21,7 @@ class Home extends React.Component {
        </div>
         
         {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25501.195348338802!2d-83.93105204246629!3d36.97042895186226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885cb7f7643662b7%3A0x6b9093a732e10457!2sKnox%20Fork!5e0!3m2!1sen!2sus!4v1593273394268!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> */}
-        <p className="hurst-beginnings">All of the Hurst children born to James and Elsie Hurst ended up leaving Jarvis Store in Knox Fork, Ky. Each of them spread their wings and created a life well lived.  They never lost the importance of family.   Every couple of years, they found a way to come back together, to catch up and to remember.  This page is for them.</p>
+        <p className="hurst-beginnings">All of the Hurst children born to James and Elsie Hurst ended up leaving Jarvis Store in Knox Fork, Ky. Each of them spread their wings and created a life well lived.  They never lost sight of the importance of family.   Every couple of years, they found their way to come back together, to catch up and to remember.  This page is for them.</p>
       
     <div className="footer fixed bottom">
        <p>© 2020 - Michele Rawlins</p>

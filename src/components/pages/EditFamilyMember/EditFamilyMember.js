@@ -8,7 +8,7 @@ class EditFamilyMember extends React.Component {
     newName: '',
     newProfession: '',
     newSpouse: '',
-    newImageUrl: '',
+    newFamilyImage: '',
     newBirthdate: '',
     newDeath: '',
     newChildren: '',
@@ -17,15 +17,15 @@ class EditFamilyMember extends React.Component {
     const familyMembersId = this.props.match.params.familyMembersId;
     familyMembersData.getSingleFamilyMember(familyMembersId)
     .then((response) => {
-      const familyMember = response.data;
+      const familyMembers = response.data;
       this.setState({
-        newName: familyMember.name,
-        newProfession: familyMember.profession,
-        newSpouse: familyMember.spouse,
-        newImageUrl: familyMember.imageUrl,
-        newBirthdate: familyMember.birthdate,
-        newDeath: familyMember.death,
-        newChildren: familyMember.children,
+        newName: familyMembers.name,
+        newProfession: familyMembers.profession,
+        newSpouse: familyMembers.spouse,
+        newFamilyImage: familyMembers.imageUrl,
+        newBirthdate: familyMembers.birthdate,
+        newDeath: familyMembers.death,
+        newChildren: familyMembers.children,
       });
     })
     .catch((err) => console.error('unable to edit family member', err));
@@ -45,9 +45,9 @@ class EditFamilyMember extends React.Component {
     this.setState({newSpouse: e.target.value});
   }
   
-  newImageUrl = (e) => {
+  newFamilyImage = (e) => {
     e.preventDefault();
-    this.setState({newImageUrl: e.target.value});
+    this.setState({  newFamilyImage: e.target.value});
   }
   
   newBirthdate = (e) => {
@@ -72,7 +72,7 @@ class EditFamilyMember extends React.Component {
       newName,
       newProfession,
       newSpouse,
-      newImageUrl,
+      newFamilyImage,
       newBirthdate,
       newDeath,
       newChildren,
@@ -82,7 +82,7 @@ class EditFamilyMember extends React.Component {
       name: newName,
       profession: newProfession,
       spouse: newSpouse,
-      imageUrl: newImageUrl,
+      imageUrl: newFamilyImage,
       birthdate: newBirthdate,
       death: newDeath,
       children: newChildren,
@@ -99,7 +99,7 @@ class EditFamilyMember extends React.Component {
       newName,
       newProfession,
       newSpouse,
-      newImageUrl,
+      newFamilyImage,
       newBirthdate,
       newDeath,
       newChildren,
@@ -145,8 +145,8 @@ class EditFamilyMember extends React.Component {
         type="text"
         className="form-control"
         id="new-imageUrl"
-        value={newImageUrl}
-        onChange={this.newImageUrl}
+        value={newFamilyImage}
+        onChange={this.newFamilyImage}
         />
         </div>
         <div className="form-group"> 

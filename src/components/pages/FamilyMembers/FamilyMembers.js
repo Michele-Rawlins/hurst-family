@@ -4,14 +4,18 @@ import authData from '../../../helpers/data/authData';
 import familyMembersData from '../../../helpers/data/familyMembersData';
 import FamilyMembersCard from '../../shared/FamilyMembersCard/FamilyMembersCard';
 
-// import FilterResults from 'react-filter-search';
+import filter from 'react-filter-search';
 
 
 class FamilyMembers extends React.Component {
- state={
+constructor() {
+  super();
+
+ this.state = {
     familyMembers: [],
-   
-  }
+   search: '' 
+  };
+}
 
 
   getFamilyMembers =() => {
@@ -24,7 +28,9 @@ class FamilyMembers extends React.Component {
   componentDidMount() {
   this.getFamilyMembers();
   }
-
+updateSearch(e) {
+this.setState({search: e.target.value})
+}
   removeFamilyMember = (familyMembersId) => {
     familyMembersData.deleteFamilyMember(familyMembersId)
     .then(() => this.getFamilyMembers())
@@ -34,12 +40,22 @@ class FamilyMembers extends React.Component {
 
   render() {
     const { familyMembers } =this.state;
+    // let filteredNames = this.props.familyMembers.filter(
+    //   (familyMembers) => {
+    //     return familyMembers.name.toLowerCase().indexOf(this.state.search) !== -1;
+    //   });
+    
       const buildFamilyMembersCard = familyMembers.map((familyMembers) => (
+      // const buildFamilyMembersCard = filteredNames.map((familyMembers) => (
 
       <FamilyMembersCard key={familyMembers.id} familyMembers={familyMembers} removeFamilyMember={this.removeFamilyMember}/>
     ));
     return (
       <div className="FamilyMembers">
+        <input type="text"
+        id="enter name"
+        value={this.state.search}
+        onChange={this.updateSearch.bind(this)}/>
         <h1>Family Members</h1>
         <div className="d-flex flex-wrap">
        {buildFamilyMembersCard}
