@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import familyMembersShape from '../../../helpers/propz/familyMembersShape';
-
+import './FamilyMembersCard.scss';
 class FamilyMembersCard extends React.Component {
   static propTypes = {
     familyMembers: familyMembersShape.familyMembersShape,
