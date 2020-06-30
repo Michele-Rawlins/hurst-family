@@ -74,8 +74,8 @@ const newFamilyMember = {
 };
 
 familyMembersData.postNewFamilyMember(newFamilyMember)
-  .then(() => this.props.history.push('family'))
-  .catch((err) => console.error('i=unable to add new family member', err));
+  .then(() => this.props.history.push('/family'))
+  .catch((err) => console.error('unable to add new family member', err));
 }
 
 render() {

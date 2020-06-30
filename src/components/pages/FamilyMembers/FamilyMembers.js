@@ -4,7 +4,7 @@ import authData from '../../../helpers/data/authData';
 import familyMembersData from '../../../helpers/data/familyMembersData';
 import FamilyMembersCard from '../../shared/FamilyMembersCard/FamilyMembersCard';
 
-import filter from 'react-filter-search';
+// import filter from 'react-filter-search';
 
 import Search from '../../shared/Search/Search';
 
@@ -15,7 +15,8 @@ constructor() {
 
  this.state = {
     familyMembers: [],
-   filteredNames: '' 
+   filteredNames: [], 
+   filter: null,
   };
 }
 
@@ -24,8 +25,8 @@ constructor() {
     const uid = authData.getUid();
     familyMembersData.getFamilyMembersByUid(uid)
     .then((familyMembers) => this.setState({ familyMembers }))
-  // .then((familyMembers) => this.setState({ filteredNames: familyMembers })
-  // )
+  .then((familyMembers) => this.setState({ filteredNames: familyMembers })
+  )
     .catch((err) => console.error('unable to get family members', err))
   }
 
@@ -34,10 +35,10 @@ constructor() {
   this.getFamilyMembers();
   }
 
-  // searchNames(query) {
-  //   const familyMembers = this.state.filteredNames.filter(familyName => familyName.name.includes(query));
-  //   this.setState({ familyMembers });
-  // }
+  searchNames(query) {
+    const familyMembers = this.state.filteredNames.filter(familyName => familyName.name.includes(query));
+    this.setState({ familyMembers });
+  }
 
 
 
@@ -62,11 +63,11 @@ constructor() {
       const buildFamilyMembersCard = familyMembers.map((familyMembers) => (
       // const buildFamilyMembersCard = filteredNames.map((familyMembers) => (
 
-      <FamilyMembersCard key={familyMembers.id} familyMembers={familyMembers} removeFamilyMember={this.removeFamilyMember}/>
+      <FamilyMembersCard key={familyMembers.id} familyMembers={familyMembers} removeFamilyMember={this.removeFamilyMember} searchNames={this.searchNames}/>
     ));
     return (
       <div className="FamilyMembers">
-        {/* <Search searchNames={this.searchNames.bind(this)}/> */}
+        <Search searchNames={this.searchNames.bind(this)}/>
         <h1>Family Members</h1>
         <div className="d-flex flex-wrap">
        {buildFamilyMembersCard}
