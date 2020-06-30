@@ -16,7 +16,7 @@ constructor() {
  this.state = {
     familyMembers: [],
    filteredNames: [], 
-   filter: null,
+  //  filter: null,
   };
 }
 
@@ -25,7 +25,7 @@ constructor() {
     const uid = authData.getUid();
     familyMembersData.getFamilyMembersByUid(uid)
     .then((familyMembers) => this.setState({ familyMembers }))
-  .then((familyMembers) => this.setState({ filteredNames: familyMembers })
+  .then((familyMembers) => this.setState({ filteredNames: familyMembers.name })
   )
     .catch((err) => console.error('unable to get family members', err))
   }
@@ -55,6 +55,7 @@ constructor() {
 
   render() {
     const { familyMembers } =this.state;
+    const { filteredNames } =this.state;
     // let filteredNames = this.props.familyMembers.filter(
     //   (familyMembers) => {
     //     return familyMembers.name.toLowerCase().indexOf(this.state.search) !== -1;
