@@ -67,7 +67,7 @@ class MyNavbar extends React.Component {
     return (
       <div className="jumbotron jumbotron-fluid">
       <div className="container">
-        <h1 className="display-4 intro">Welcome to the Hurst Family</h1>
+        <h1 className="display-4 intro" expand="md">Welcome to the Hurst Family</h1>
         <p className="arabian-proverb">Every day of your life is a page of your history. -- Arabian Proverb</p>
         <div className="myNavbar">
         <Navbar className="myNavbar" color=""  expand="md">
