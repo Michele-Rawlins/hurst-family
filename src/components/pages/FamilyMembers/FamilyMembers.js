@@ -3,6 +3,7 @@ import React from 'react';
 import authData from '../../../helpers/data/authData';
 import familyMembersData from '../../../helpers/data/familyMembersData';
 import FamilyMembersCard from '../../shared/FamilyMembersCard/FamilyMembersCard';
+import NewFamilyMember from '../NewFamilyMember/NewFamilyMember';
 
 // import filter from 'react-filter-search';
 
@@ -24,9 +25,7 @@ constructor() {
   getFamilyMembers =() => {
     const uid = authData.getUid();
     familyMembersData.getFamilyMembersByUid(uid)
-    .then((familyMembers) => this.setState({ familyMembers }))
-  .then((familyMembers) => this.setState({ filteredNames: familyMembers.name })
-  )
+    .then((familyMembers) => this.setState({ familyMembers, filteredNames: familyMembers }))
     .catch((err) => console.error('unable to get family members', err))
   }
 
@@ -36,7 +35,7 @@ constructor() {
   }
 
   searchNames(query) {
-    const familyMembers = this.state.filteredNames.filter(familyName => familyName.name.includes(query));
+    const familyMembers = this.state.filteredNames.filter(familyName => familyName.name.toLowerCase().includes(query));
     this.setState({ familyMembers });
   }
 
