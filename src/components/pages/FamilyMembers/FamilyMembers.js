@@ -6,6 +6,8 @@ import FamilyMembersCard from '../../shared/FamilyMembersCard/FamilyMembersCard'
 
 import filter from 'react-filter-search';
 
+import Search from '../../shared/Search/Search';
+
 
 class FamilyMembers extends React.Component {
 constructor() {
@@ -13,7 +15,7 @@ constructor() {
 
  this.state = {
     familyMembers: [],
-   search: '' 
+   filteredNames: '' 
   };
 }
 
@@ -22,15 +24,27 @@ constructor() {
     const uid = authData.getUid();
     familyMembersData.getFamilyMembersByUid(uid)
     .then((familyMembers) => this.setState({ familyMembers }))
-  .catch((err) => console.error('unable to get family members', err))
+  // .then((familyMembers) => this.setState({ filteredNames: familyMembers })
+  // )
+    .catch((err) => console.error('unable to get family members', err))
   }
+
 
   componentDidMount() {
   this.getFamilyMembers();
   }
-updateSearch(e) {
-this.setState({search: e.target.value})
-}
+
+  // searchNames(query) {
+  //   const familyMembers = this.state.filteredNames.filter(familyName => familyName.name.includes(query));
+  //   this.setState({ familyMembers });
+  // }
+
+
+
+// updateSearch(e) {
+// this.setState({search: e.target.value})
+// }
+
   removeFamilyMember = (familyMembersId) => {
     familyMembersData.deleteFamilyMember(familyMembersId)
     .then(() => this.getFamilyMembers())
@@ -52,10 +66,7 @@ this.setState({search: e.target.value})
     ));
     return (
       <div className="FamilyMembers">
-        <input type="text"
-        id="enter name"
-        value={this.state.search}
-        onChange={this.updateSearch.bind(this)}/>
+        {/* <Search searchNames={this.searchNames.bind(this)}/> */}
         <h1>Family Members</h1>
         <div className="d-flex flex-wrap">
        {buildFamilyMembersCard}
