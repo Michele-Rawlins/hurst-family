@@ -24,7 +24,6 @@ Welcome to the family.  This application is for the Hurst Family.  It allows the
 
 ## How to Run
 
-How To Run
 Clone down this project.
 Create apiKeys.json file using the template apiKeysExample.json with your own firebase keys added.
 Install http-server from npm.
