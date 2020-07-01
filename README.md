@@ -5,11 +5,11 @@ Link to deployed site:
  https://hurst-family-f893c.web.app
 
 ## Technologies Used:
-HTML, CSS and Javacript
-React
-Bootstrap
-JQuery
-Sass
+HTML, CSS and Javacript,
+React,
+Bootstrap,
+JQuery,
+Sass,
 Firebase(database and hosting)
 
 ## Introduction
@@ -22,7 +22,12 @@ Welcome to the family.  This application is for the Hurst Family.  It allows the
 
 
 
-## Available Scripts
+## How to Run
+
+How To Run
+Clone down this project.
+Create apiKeys.json file using the template apiKeysExample.json with your own firebase keys added.
+Install http-server from npm.
 
 In the project directory, you can run:
 
