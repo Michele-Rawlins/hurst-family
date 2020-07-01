@@ -4,7 +4,7 @@ Link to deployed site:
 
  https://hurst-family-f893c.web.app
 
-Technologies Used:
+## Technologies Used:
 HTML, CSS and Javacript
 React
 Bootstrap
@@ -14,8 +14,9 @@ Firebase(database and hosting)
 
 Welcome to the family.  This application is for the Hurst Family.  It allows them to view Fun Facts and Family Members, Edit Fun Facts and Family members, Add Fun Facts and Family Members or Delete Fun Facts and Family Members.  
 
-Screenshots:
-"https://live.staticflickr.com/65535/50063559001_f63c5bcb36_n.jpg" 
+## Screenshots:
+![Main Screen](./src/screenshots/HurstFamilyHome.PNG)
+
 
 
 
