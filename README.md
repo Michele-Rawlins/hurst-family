@@ -12,11 +12,13 @@ JQuery
 Sass
 Firebase(database and hosting)
 
+## Introduction
 Welcome to the family.  This application is for the Hurst Family.  It allows them to view Fun Facts and Family Members, Edit Fun Facts and Family members, Add Fun Facts and Family Members or Delete Fun Facts and Family Members.  
 
 ## Screenshots:
 ![Main Screen](./src/screenshots/HurstFamilyHome.PNG)
-
+![Main Screen](./src/screenshots/FunFactsPage.PNG)
+![Main Screen](./src/screenshots/FamilyMembersPage.PNG)
 
 
 
