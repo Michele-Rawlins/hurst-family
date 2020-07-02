@@ -3,7 +3,7 @@ import React from 'react';
 import authData from '../../../helpers/data/authData';
 import funFactsData from '../../../helpers/data/funFactsData';
 import FunFactsCard from '../../shared/FunFactsCard/FunFactsCard';
-
+import { Link } from 'react-router-dom';
 class FunFacts extends React.Component {
   state = {
     funFacts: [],
@@ -33,6 +33,7 @@ class FunFacts extends React.Component {
     return (
       <div className="FunFacts">
         <h1>Fun Facts</h1>
+        <Link to='facts/new'><button className="addFunFact">Add Fun Fact</button></Link>
         <div className="d-flex flex-wrap">
           {buildFunFactsCards}
         </div>

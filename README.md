@@ -16,8 +16,11 @@ Firebase(database and hosting)
 Welcome to the family.  This application is for the Hurst Family.  It allows them to view Fun Facts and Family Members, Edit Fun Facts and Family members, Add Fun Facts and Family Members or Delete Fun Facts and Family Members.  
 
 ## Screenshots:
+Home Page
 ![Main Screen](./src/screenshots/HurstFamilyHome.PNG)
+Fun Facts Page
 ![Main Screen](./src/screenshots/FunFactsPage.PNG)
+Family Members Page
 ![Main Screen](./src/screenshots/FamilyMembersPage.PNG)
 
 
