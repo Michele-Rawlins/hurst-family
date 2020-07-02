@@ -6,7 +6,7 @@ import FamilyMembersCard from '../../shared/FamilyMembersCard/FamilyMembersCard'
 import NewFamilyMember from '../NewFamilyMember/NewFamilyMember';
 
 // import filter from 'react-filter-search';
-
+import { Link } from 'react-router-dom';
 import Search from '../../shared/Search/Search';
 
 
@@ -55,7 +55,7 @@ constructor() {
   render() {
     const { familyMembers } =this.state;
     const { filteredNames } =this.state;
-    // let filteredNames = this.props.familyMembers.filter(
+     // let filteredNames = this.props.familyMembers.filter(
     //   (familyMembers) => {
     //     return familyMembers.name.toLowerCase().indexOf(this.state.search) !== -1;
     //   });
@@ -69,6 +69,7 @@ constructor() {
       <div className="FamilyMembers">
         <Search searchNames={this.searchNames.bind(this)}/>
         <h1>Family Members</h1>
+        <Link to='family/new'><button className="addFamilyMember">Add Family Member</button></Link>
         <div className="d-flex flex-wrap">
        {buildFamilyMembersCard}
       </div>
