@@ -5,7 +5,7 @@ import memoriesData from '../../../helpers/data/memoriesData';
 import MemoriesCard from '../../shared/MemoriesCard/MemoriesCard';
 
 import { Link } from 'react-router-dom';
-import funFactsData from '../../../helpers/data/funFactsData';
+
 
 class Memories extends React.Component {
   state = {
