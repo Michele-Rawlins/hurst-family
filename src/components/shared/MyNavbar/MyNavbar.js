@@ -39,8 +39,8 @@ class MyNavbar extends React.Component {
       const { authed } = this.props;
       if (authed) {
         return (
-          <Nav className="ml-auto navbar-links bg-dark" navbar>
-            <NavItem>
+          <Nav className="navbar-links bg-dark fluid ml-auto" navbar>
+              <NavItem>
               <NavLink className="navbar-links" tag={RRNavLink} to='/home'>Home</NavLink>
             </NavItem>
             <NavItem>
@@ -73,11 +73,11 @@ class MyNavbar extends React.Component {
 
     return (
       <div className="jumbotron jumbotron-fluid">
-      <div className="container">
-        <h1 className="display-4 intro" expand="md">Welcome to the Hurst Family</h1>
+      <div className="container-fluid">
+        <h1 className="display-4 intro" >Welcome to the Hurst Family</h1>
         <p className="arabian-proverb">Every day of your life is a page of your history. -- Arabian Proverb</p>
         <div className="myNavbar">
-        <Navbar className="myNavbar" color=""  expand="md">
+        <Navbar className="myNavbar"  expand="sm">
           <NavbarBrand href="/"><span><img src="https://live.staticflickr.com/65535/50028151452_aee1fc33c6_n.jpg" width="150" height="150" alt="Hurst-England"></img></span></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={isOpen} navbar>

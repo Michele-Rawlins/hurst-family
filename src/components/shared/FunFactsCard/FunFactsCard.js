@@ -18,7 +18,7 @@ class FunFactsCard extends React.Component {
       <div className="funFactsCard col-4">
         <div className="card">
           <div className="card-body">
-          <img className="document-pic" src={funFacts.imageUrl} alt="item in collection"></img>
+          <img className="document-pic img-fluid" src={funFacts.imageUrl} fluid alt="item in collection"></img>
             <h5 className="card-year">{funFacts.year}</h5>
             <Link className="btn btn-outline-dark" to={singleLink}><i className="fas fa-glasses"></i></Link>
           <Link className="btn btn-outline-light" to={editLink}><i className="fas fa-pen-alt"></i></Link>

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+
 import familyMembersShape from '../../../helpers/propz/familyMembersShape';
 import './FamilyMembersCard.scss';
 class FamilyMembersCard extends React.Component {
@@ -17,7 +18,7 @@ class FamilyMembersCard extends React.Component {
       <div className="FamilyMembersCard col-4">
         <div className="card">
           <div className="card-body">
-            <img className="family-member-image" src={familyMembers.imageUrl} alt="family member"></img>
+            <img className="family-member-image img-fluid" src={familyMembers.imageUrl} fluid alt="family member"></img>
           <h4 className="family-member-name">{familyMembers.name}</h4>
           <h5 className="family-members-spouse">Spouse:{familyMembers.spouse}</h5>
          <h5 className="birthdate">Birthdate:{familyMembers.birthdate}</h5>
