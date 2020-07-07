@@ -11,7 +11,7 @@ class Home extends React.Component {
     
     return (
    <div className="Home container">
-    <img className="JamesandElsiePic" src="https://live.staticflickr.com/65535/50027351133_6890848f92_n.jpg" width="400" height="350" alt="jamesAndElsieCloseUp"></img>
+    <img className="JamesandElsiePic img-fluid" src="https://live.staticflickr.com/65535/50027351133_6890848f92_n.jpg" width="400" height="350" fluid alt="jamesAndElsieCloseUp"></img>
         <p className="hurst-beginnings align-left"> In a little farmhouse in Hinkle Haller, the next generation of the Hurst family began. This home was a one room home.  They eventually moved a few hillsides over to Jarvis Store. James Hurst worked in the mines to save enough money to purchase the farm and then built the home pictured below which was located in Knox Fork Kentucky.  It is named after the fork in the river.They farmed the land to survive.  James Hurst worked stripping tobacco in the winter time.  They only went to town for salt, sugar and flour.  They ground their own meal.  They all rose from humble beginnings.  Each was a success in their own right.</p>
         <div className="d-flex flex-wrap photo-container">
         <img className="hurst-home-dog align-left" src="https://live.staticflickr.com/65535/50027350968_87de84c671_n.jpg" width="320" height="320" alt="dogOnPorch"></img>
