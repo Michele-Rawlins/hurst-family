@@ -6,7 +6,6 @@ import MemoriesCard from '../../shared/MemoriesCard/MemoriesCard';
 
 import { Link } from 'react-router-dom';
 
-
 class Memories extends React.Component {
   state = {
     memories: [],

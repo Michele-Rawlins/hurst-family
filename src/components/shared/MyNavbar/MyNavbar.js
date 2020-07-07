@@ -58,9 +58,9 @@ class MyNavbar extends React.Component {
             <NavItem>
               <NavLink className="navbar-links" tag={RRNavLink} to='/memories'>Memories</NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink className="navbar-links" tag={RRNavLink} to='/memories/new'>New Memories</NavLink>
-            </NavItem>
+            </NavItem> */}
             
             <NavItem>
               <NavLink className="navbar-links" onClick={this.logMeOut}>Log Out</NavLink>
