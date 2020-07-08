@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink as RRNavLink } from 'react-router-dom';
 import {
-  Collapse,
+  // Collapse,
+  Row,
   Navbar,
   NavbarToggler,
   NavbarBrand,
@@ -39,7 +40,8 @@ class MyNavbar extends React.Component {
       const { authed } = this.props;
       if (authed) {
         return (
-          <Nav className="navbar-links bg-dark fluid ml-auto" navbar>
+          <div>
+          <Nav className="navbar-links bg-dark fluid ml-auto nav-links" expand="lg" navbar>
               <NavItem>
               <NavLink className="navbar-links" tag={RRNavLink} to='/home'>Home</NavLink>
             </NavItem>
@@ -66,23 +68,26 @@ class MyNavbar extends React.Component {
               <NavLink className="navbar-links" onClick={this.logMeOut}>Log Out</NavLink>
           </NavItem>
           </Nav>
+          </div>
         );
       }
       return <Nav className="ml-auto" navbar></Nav>;
     };
 
     return (
-      <div className="jumbotron jumbotron-fluid">
-      <div className="container-fluid">
+      <div className="myNavbar-container">
+       <div className="container-fluid">
         <h1 className="display-4 intro" >Welcome to the Hurst Family</h1>
         <p className="arabian-proverb">Every day of your life is a page of your history. -- Arabian Proverb</p>
-        <div className="myNavbar">
-        <Navbar className="myNavbar"  expand="sm">
-          <NavbarBrand href="/"><span><img src="https://live.staticflickr.com/65535/50028151452_aee1fc33c6_n.jpg" width="150" height="150" alt="Hurst-England"></img></span></NavbarBrand>
+        <div>
+        <Navbar className="myNavbar d-flex"  expand="sm">
+          {/* <Row> */}
+          <NavbarBrand href="/"><span><img className="crest-image"src="https://live.staticflickr.com/65535/50028151452_aee1fc33c6_n.jpg"  alt="Hurst-England"></img></span></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={isOpen} navbar>
+          {/* <Collapse isOpen={isOpen} navbar> */}
             {buildNavbar()}
-          </Collapse>
+          {/* </Collapse> */}
+          {/* </Row> */}
         </Navbar>
       </div>
       </div>

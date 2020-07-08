@@ -8,4 +8,19 @@
   font-family: Bershire Swash;
   background-color:  #be9330;
 
+
+}
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.crest-image {
+  width: 100%;
+  max-width: 20vw;
+  height: 20vw;
+}
+
+.myNavbar-container {
+  display: block;
 }
