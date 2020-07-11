@@ -36,6 +36,7 @@ class Memories extends React.Component {
     return(
       <div className="Memories">
         <h1>Memories</h1>
+        <Link to='memories/new'><button className="addMemory">Add Memory</button></Link>
         <div className="d-flex flex-wrap">
         {buildMemoriesCards}
         </div>
