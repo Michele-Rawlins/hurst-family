@@ -87,10 +87,10 @@ class App extends React.Component {
                 <PrivateRoute path='/family/new' component={NewFamilyMember} authed={authed} />
                 <PrivateRoute path='/family/:familyMembersId' component={SingleFamilyMember} authed={authed} />
                 <PrivateRoute path='/family' component={FamilyMembers} authed={authed} />
-                <PrivateRoute path='/memories' component={Memories} authed={authed} />
-                <PrivateRoute path='/memories/new' component={NewMemories} authed={authed} />
                 <PrivateRoute path='/memories/edit/:memoriesId' component={EditMemories} authed={authed} />
+                <PrivateRoute path='/memories/new' component={NewMemories} authed={authed} />
                 <PrivateRoute path='/memories/:memoriesId' component={SingleMemory} authed={authed} />
+                <PrivateRoute path='/memories' component={Memories} authed={authed} />
                 <PublicRoute path='/auth' component={Auth} authed={authed} />
                 <Redirect from= "*" to="/home"/>
               </Switch>

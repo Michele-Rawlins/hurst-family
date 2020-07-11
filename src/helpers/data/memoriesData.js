@@ -19,6 +19,20 @@ const getMemoriesByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const getSingleMemory = (memoriesId) => axios.get(`${baseUrl}/memories/${memoriesId}.json`);
+
+const postMemory = (newMemory) => axios.post(`${baseUrl}/memories.json`, newMemory);
+
+const putMemory = (memoriesId, updatedMemory) => axios.put(`${baseUrl}/memories/${memoriesId}.json`, updatedMemory);
+
+const deleteMemory = (memoriesId) => axios.delete(`${baseUrl}/memories/${memoriesId}.json`);
+
+
+
 export default {
   getMemoriesByUid,
+  getSingleMemory,
+  postMemory,
+  putMemory,
+  deleteMemory,
 }
