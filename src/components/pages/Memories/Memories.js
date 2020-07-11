@@ -22,10 +22,16 @@ class Memories extends React.Component {
     this.getMemories();
   }
 
+  removeMemory = (memoriesId) => {
+    memoriesData.deleteMemory(memoriesId)
+    .then(() => this.getMemories())
+    .catch((err) => console.error('unable to delete memory', err));
+  }
+
   render() {
     const { memories } = this.state;
     const buildMemoriesCards = memories.map((memories)=> (
-      <MemoriesCard key = {memories.id} memories={memories}/>
+      <MemoriesCard key = {memories.id} memories={memories} removeMemory={this.removeMemory}/>
     ));
     return(
       <div className="Memories">
