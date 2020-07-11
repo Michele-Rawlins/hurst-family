@@ -21,7 +21,7 @@ const getMemoriesByUid = (uid) => new Promise((resolve, reject) => {
 
 const getSingleMemory = (memoriesId) => axios.get(`${baseUrl}/memories/${memoriesId}.json`);
 
-const postMemory = (newMemory) => axios.post(`${baseUrl}/memories.json`, newMemory);
+const postNewMemory = (newMemory) => axios.post(`${baseUrl}/memories.json`, newMemory);
 
 const putMemory = (memoriesId, updatedMemory) => axios.put(`${baseUrl}/memories/${memoriesId}.json`, updatedMemory);
 
@@ -32,7 +32,7 @@ const deleteMemory = (memoriesId) => axios.delete(`${baseUrl}/memories/${memorie
 export default {
   getMemoriesByUid,
   getSingleMemory,
-  postMemory,
+  postNewMemory,
   putMemory,
   deleteMemory,
 }
