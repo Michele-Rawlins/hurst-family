@@ -9,8 +9,8 @@ class FunFacts extends React.Component {
     funFacts: [],
   }
   getFunFacts = () => {
-    const uid = authData.getUid();
-    funFactsData.getFunFactsByUid(uid)
+    // const uid = authData.getUid();
+    funFactsData.getFunFactsData()
     .then((funFacts) => this.setState({ funFacts }))
     .catch((err) => console.error('unable to get funFacts:',err))
   }

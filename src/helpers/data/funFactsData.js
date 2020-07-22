@@ -3,15 +3,15 @@ import firebaseConfig from '../apiKeys.json';
 
 const baseUrl = firebaseConfig.firebaseKeys.databaseURL;
 
-const getFunFactsByUid = (uid) => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/funFacts.json?orderBy="uid"&equalTo="${uid}"`)
+const getFunFactsData = () => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/funFacts.json`)
     .then((response) => {
       const fbFunFacts = response.data;
       const funFacts = [];
-      if (fbFunFacts) {
-        Object.keys(fbFunFacts).forEach((fbId) => {
-          fbFunFacts[fbId].id = fbId;
-          funFacts.push(fbFunFacts[fbId]);
+      if (funFacts) {
+        Object.keys(fbFunFacts).forEach((funFactsId) => {
+          fbFunFacts[funFactsId].id = funFactsId;
+          funFacts.push(fbFunFacts[funFactsId]);
         });
       }
       resolve(funFacts);
@@ -28,7 +28,7 @@ const putFunFact = (funFactsId, updatedFunFact) => axios.put(`${baseUrl}/funFact
 const deleteFunFact = (funFactsId) => axios.delete(`${baseUrl}/funFacts/${funFactsId}.json`);
 
 export default {
-  getFunFactsByUid,
+  getFunFactsData,
   postNewFunFact,
   getSingleFunFact,
   putFunFact,
