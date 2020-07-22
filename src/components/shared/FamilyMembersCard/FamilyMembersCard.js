@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import firebase from 'firebase/app';
+
 
 
 import familyMembersShape from '../../../helpers/propz/familyMembersShape';

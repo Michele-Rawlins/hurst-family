@@ -3,15 +3,15 @@ import firebaseConfig from '../apiKeys.json';
 
 const baseUrl = firebaseConfig.firebaseKeys.databaseURL;
 
-const getFamilyMembersByUid = (uid) => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/familyMembers.json?orderBy="uid"&equalTo="${uid}"`)
+const getFamilyMembersData = () => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/familyMembers.json`)
     .then((response) => {
       const fbFamilyMembers = response.data;
       const familyMembers = [];
-      if (fbFamilyMembers) {
-        Object.keys(fbFamilyMembers).forEach((fbId) => {
-          fbFamilyMembers[fbId].id = fbId;
-          familyMembers.push(fbFamilyMembers[fbId]);
+      if (familyMembers) {
+        Object.keys(fbFamilyMembers).forEach((familyMembersId) => {
+          fbFamilyMembers[familyMembersId].id = familyMembersId;
+          familyMembers.push(fbFamilyMembers[familyMembersId]);
         });
       }
       resolve(familyMembers);
@@ -28,7 +28,7 @@ const putFamilyMember = (familyMembersId, updatedFamilyMember) => axios.put(`${b
 const deleteFamilyMember = (familyMembersId) => axios.delete(`${baseUrl}/familyMembers/${familyMembersId}.json`);
 
 export default {
-  getFamilyMembersByUid,
+  getFamilyMembersData,
   postNewFamilyMember,
   getSingleFamilyMember, 
   putFamilyMember,

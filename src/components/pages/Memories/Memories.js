@@ -12,8 +12,8 @@ class Memories extends React.Component {
   }
 
   getMemories = () => {
-    const uid = authData.getUid();
-   memoriesData.getMemoriesByUid(uid)
+    // const uid = authData.getUid();
+   memoriesData.getMemoriesData()
     .then((memories) => this.setState({ memories }))
 .catch ((err) => console.error('unable to get memories', err))
   }

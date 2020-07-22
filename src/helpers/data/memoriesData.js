@@ -3,15 +3,15 @@ import firebaseConfig from '../apiKeys.json';
 
 const baseUrl = firebaseConfig.firebaseKeys.databaseURL;
 
-const getMemoriesByUid = (uid) => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/memories.json?orderBy="uid"&equalTo="${uid}"`)
+const getMemoriesData = () => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/memories.json`)
     .then((response) => {
       const fbMemories = response.data;
       const memories = [];
-      if (fbMemories) {
-        Object.keys(fbMemories).forEach((fbId) => {
-          fbMemories[fbId].id = fbId;
-          memories.push(fbMemories[fbId]);
+      if (memories) {
+        Object.keys(fbMemories).forEach((memoriesId) => {
+          fbMemories[memoriesId].id = memoriesId;
+          memories.push(fbMemories[memoriesId]);
         });
       }
       resolve(memories);
@@ -30,7 +30,7 @@ const deleteMemory = (memoriesId) => axios.delete(`${baseUrl}/memories/${memorie
 
 
 export default {
-  getMemoriesByUid,
+  getMemoriesData,
   getSingleMemory,
   postNewMemory,
   putMemory,

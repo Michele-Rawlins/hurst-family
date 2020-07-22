@@ -23,8 +23,8 @@ constructor() {
 
 
   getFamilyMembers =() => {
-    const uid = authData.getUid();
-    familyMembersData.getFamilyMembersByUid(uid)
+    // const uid = authData.getUid();
+    familyMembersData.getFamilyMembersData()
     .then((familyMembers) => this.setState({ familyMembers, filteredNames: familyMembers }))
     .catch((err) => console.error('unable to get family members', err))
   }
